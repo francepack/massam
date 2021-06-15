@@ -3,62 +3,58 @@ import Schedule from './Schedule.js';
 import Gifts from './Gifts.js';
 import Food from './Food.js';
 import Denver from './Denver.js';
-import General from './General.js';
+import Travel from './Travel.js';
 import Contact from './Contact.js';
 import Covid from './Covid.js';
-
-
-
-
-import './css/App.css';
+import Home from './Home.js';
+import './css/app.css';
 
 function App() {
-  const [currentPage, setCurrentPage] = useState('');
+  const [currentPage, setCurrentPage] = useState('home');
+  const pages = ['home', 'schedule', 'denver', 'travel', 'food', 'gifts', 'covid', 'contact' ]
 
   const changePage = (page) => {
     setCurrentPage(page);
   }
 
+  const renderNavItems = () => {
+    return pages.map(page => (<li key={page} onClick={() => changePage(page)}>{page.charAt(0).toUpperCase() + page.slice(1)}</li>))
+  }
+
   return (
-    <div className='App'>
-      <header className='App-header'>
+    <div className='app'>
+      <header className='app-header'>
         <h2>Massam Wedding</h2>
         <div className='nav-bar-area'>
           <ul>
-            <li onClick={() => changePage('schedule')}>Schedule</li>
-            <li onClick={() => changePage('denver')}>Denver</li>
-            <li onClick={() => changePage('general')}>Tavel Info</li>
-            <li onClick={() => changePage('food')}>Food</li>
-            <li onClick={() => changePage('gifts')}>Gifts</li>
-            <li onClick={() => changePage('covid')}>Covid info</li>
-            <li onClick={() => changePage('contact')}>Contact us</li>
+            {renderNavItems()}
           </ul>
         </div>
       </header>
       <main>
-        {currentPage === '' &&
-          <p>We look forward to seeing you!</p>
+      {currentPage === 'home' &&
+        <Home />
         }
-        {currentPage === 'schedule' &&
-          <Schedule />
+      {currentPage === 'schedule' &&
+        <Schedule />
         }
-        {currentPage === 'denver' &&
-          <Denver />
+      {currentPage === 'denver' &&
+        <Denver />
         }
-        {currentPage === 'food' &&
-          <Food />
+      {currentPage === 'food' &&
+        <Food />
         }
-        {currentPage === 'gifts' &&
-          <Gifts />
+      {currentPage === 'gifts' &&
+        <Gifts />
         }
-        {currentPage === 'covid' &&
-          <Covid />
+      {currentPage === 'covid' &&
+        <Covid />
         }
-        {currentPage === 'contact' &&
-          <Contact />
+      {currentPage === 'contact' &&
+        <Contact />
         }
-        {currentPage === 'general' &&
-          <General />
+      {currentPage === 'travel' &&
+        <Travel />
         }
       </main>
     </div>

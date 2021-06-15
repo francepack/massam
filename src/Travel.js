@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 
-function General() {
+function Travel() {
 
   return (
-    <div className="general">
+    <div className="travel">
       Where should I stay? What should I do?
     </div>
   );
 }
 
-export default General;
+export default Travel;
