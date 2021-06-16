@@ -11,51 +11,90 @@ import './css/app.css';
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
-  const pages = ['home', 'schedule', 'denver', 'travel', 'food', 'gifts', 'covid', 'contact' ]
+  const [isNavActive, setNav] = useState(false);
+  const pages = ['home', 'schedule', 'denver', 'travel', 'food', 'gifts', 'covid', 'contact' ];
 
   const changePage = (page) => {
     setCurrentPage(page);
   }
 
+  const toggleNav = () => {
+    const newNav = !isNavActive;
+    setNav(newNav);
+  }
+
   const renderNavItems = () => {
-    return pages.map(page => (<li key={page} onClick={() => changePage(page)}>{page.charAt(0).toUpperCase() + page.slice(1)}</li>))
+    return pages.map(page => {
+      if (page !== 'home') {
+        if (page === currentPage) {
+          return(
+            <li key={page} className='nav-item selected' onClick={() => changePage(page)}><p>{page.charAt(0).toUpperCase() + page.slice(1)}</p></li>
+          )
+        } else {
+          return(
+            <li key={page} className='nav-item' onClick={() => changePage(page)}><p>{page.charAt(0).toUpperCase() + page.slice(1)}</p></li>
+          )
+        }
+      }
+    })
+  }
+
+  const renderContent = () => {
+    switch (currentPage) {
+      case 'home':
+        return <Home />
+      break;
+      case 'schedule':
+        return <Schedule />
+      break;
+      case 'denver':
+        return <Denver />
+      break;
+      case 'travel':
+        return <Travel />
+      break;
+      case 'food':
+        return <Food />
+      break;
+      case 'gifts':
+        return <Gifts />
+      break;
+      case 'covid':
+        return <Covid />
+      break;
+      case 'contact':
+        return <Contact />
+      break;
+      default:
+        return <Home />
+      break;
+    }
   }
 
   return (
     <div className='app'>
       <header className='app-header'>
-        <h2>Massam Wedding</h2>
+        <h2 className='title' onClick={() => changePage('home')}>Samantha + Mason</h2>
         <div className='nav-bar-area'>
-          <ul>
+            <ul className='list'>
+              {renderNavItems()}
+            </ul>
+            <div className='drop-down-nav'>
+              <div className='icon' onClick={() => toggleNav()}>
+                <div className='menu-bar'></div>
+                <div className='menu-bar'></div>
+                <div className='menu-bar'></div>
+              </div>
+            </div>
+        </div>
+        {isNavActive &&
+          <ul className='expanded-menu'>
             {renderNavItems()}
           </ul>
-        </div>
+        }
       </header>
       <main>
-      {currentPage === 'home' &&
-        <Home />
-        }
-      {currentPage === 'schedule' &&
-        <Schedule />
-        }
-      {currentPage === 'denver' &&
-        <Denver />
-        }
-      {currentPage === 'food' &&
-        <Food />
-        }
-      {currentPage === 'gifts' &&
-        <Gifts />
-        }
-      {currentPage === 'covid' &&
-        <Covid />
-        }
-      {currentPage === 'contact' &&
-        <Contact />
-        }
-      {currentPage === 'travel' &&
-        <Travel />
-        }
+        {renderContent()}
       </main>
     </div>
   );
