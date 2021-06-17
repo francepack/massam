@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 
-function Food() {
+function Food(props) {
 
   return (
     <div className="food">
-      About the food
+      Vegetarian and Chicken options will be available. Buffet Style. <span>Open bar.</span> Updates to come.
     </div>
   );
 }

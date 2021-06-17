@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function Contact() {
+function Contact(props) {
 
   return (
     <div className="contact">

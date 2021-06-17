@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import {AdvancedImage} from '@cloudinary/react';
+import {Cloudinary} from '@cloudinary/base';
 import Schedule from './Schedule.js';
 import Gifts from './Gifts.js';
 import Food from './Food.js';
@@ -13,6 +15,12 @@ function App() {
   const [currentPage, setCurrentPage] = useState('home');
   const [isNavActive, setNav] = useState(false);
   const pages = ['home', 'schedule', 'denver', 'travel', 'food', 'gifts', 'covid', 'contact' ];
+
+  const cld = new Cloudinary({
+    cloud: {
+      cloudName: 'drerpvd8x'
+    }
+  });
 
   const changePage = (page) => {
     setCurrentPage(page);
@@ -42,31 +50,31 @@ function App() {
   const renderContent = () => {
     switch (currentPage) {
       case 'home':
-        return <Home />
+        return <Home cld={cld} />
       break;
       case 'schedule':
-        return <Schedule />
+        return <Schedule cld={cld} />
       break;
       case 'denver':
-        return <Denver />
+        return <Denver cld={cld} />
       break;
       case 'travel':
-        return <Travel />
+        return <Travel cld={cld} />
       break;
       case 'food':
-        return <Food />
+        return <Food cld={cld} />
       break;
       case 'gifts':
-        return <Gifts />
+        return <Gifts cld={cld} />
       break;
       case 'covid':
-        return <Covid />
+        return <Covid cld={cld} />
       break;
       case 'contact':
-        return <Contact />
+        return <Contact cld={cld} />
       break;
       default:
-        return <Home />
+        return <Home cld={cld} />
       break;
     }
   }

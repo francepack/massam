@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function Covid() {
+function Covid(props) {
 
   return (
     <div className="covid">

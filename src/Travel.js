@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 
-function Travel() {
+function Travel(props) {
 
   return (
     <div className="travel">
-      Where should I stay? What should I do?
+      <p>Tips on travelling to Denver:</p>
+      <p>Lodging advice:</p>
     </div>
   );
 }
