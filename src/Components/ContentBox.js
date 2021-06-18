@@ -21,7 +21,7 @@ function ContentBox(props) {
         return <Travel />
       break;
       case 'FAQs':
-        return <Faq />
+        return <Faq size={props.size} />
       break;
       case 'Our Story':
         return <OurStory />

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {AdvancedImage} from '@cloudinary/react';
 import {Cloudinary} from '@cloudinary/base';
 import ContentBox from './Components/ContentBox.js';
@@ -9,7 +9,30 @@ function App() {
   const [ isNavActive, setNav ] = useState(false);
   const pages = [ 'Home', 'Our Story', 'Schedule', 'Travel', 'FAQs', 'Contact' ];
 
+  // hook to use window size
+  const size = useWindowSize();
+
+  function useWindowSize() {
+    const [windowSize, setWindowSize] = useState({
+      width: undefined,
+      height: undefined,
+    });
+    useEffect(() => {
+      function handleResize() {
+        setWindowSize({
+          width: window.innerWidth,
+          height: window.innerHeight,
+        });
+      }
+      window.addEventListener("resize", handleResize);
+      handleResize();
+      return () => window.removeEventListener("resize", handleResize);
+    }, []);
+    return windowSize;
+  }
+
   const changePage = (page) => {
+    console.log(size);
     setCurrentPage(page);
   }
 
@@ -59,6 +82,7 @@ function App() {
       <main>
         <ContentBox
           page={currentPage}
+          size={size}
         />
       </main>
     </div>
