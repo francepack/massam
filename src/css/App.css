@@ -100,7 +100,7 @@ main {
   .app-header {
     display: grid;
     grid-template-columns: 80% 20%;
-    grid-template-areas:"title nav";
+    grid-template-areas:'title nav';
     padding: 20px 0 0 0;
   }
   .list {

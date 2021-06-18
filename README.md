@@ -1,3 +1,12 @@
+# Massam - a Wedding app
+Created to quickly get a site deployed with some information about an upcoming wedding. Uh, only come if you're invited.
+
+Deployed on netlify. Cloudinary supports the images. React - single page app.
+
+
+---
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

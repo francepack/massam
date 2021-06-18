@@ -32,7 +32,6 @@ function App() {
   }
 
   const changePage = (page) => {
-    console.log(size);
     setCurrentPage(page);
   }
 

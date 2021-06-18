@@ -5,7 +5,6 @@ function Question(props) {
   const [ isActive, setActive ] = useState(false);
 
   const toggleActive = () => {
-    console.log('run')
     const toggle = !isActive;
     setActive(toggle);
   }
