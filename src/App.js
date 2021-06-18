@@ -1,25 +1,13 @@
 import React, { useState } from 'react';
 import {AdvancedImage} from '@cloudinary/react';
 import {Cloudinary} from '@cloudinary/base';
-import Schedule from './Components/Schedule.js';
-import Faq from './Components/Faq.js';
-import Travel from './Components/Travel.js';
-import Contact from './Components/Contact.js';
-import Home from './Components/Home.js';
+import ContentBox from './Components/ContentBox.js';
 import './css/app.css';
 
 function App() {
-  const [currentPage, setCurrentPage] = useState('home');
-  const [isNavActive, setNav] = useState(false);
-  const pages = ['home', 'schedule', 'travel', 'faq', 'contact' ];
-
-  const cld = new Cloudinary({
-    cloud: {
-      cloudName: 'drerpvd8x'
-    }
-  });
-
-  const banner = cld.image("Screen_Shot_2021-06-17_at_1.56.09_PM_mebful")
+  const [ currentPage, setCurrentPage ] = useState('Home');
+  const [ isNavActive, setNav ] = useState(false);
+  const pages = [ 'Home', 'Our Story', 'Schedule', 'Travel', 'FAQs', 'Contact' ];
 
   const changePage = (page) => {
     setCurrentPage(page);
@@ -32,41 +20,18 @@ function App() {
 
   const renderNavItems = () => {
     return pages.map(page => {
-      if (page !== 'home') {
+      if (page !== 'Home') {
         if (page === currentPage) {
           return(
-            <li key={page} className='nav-item selected' onClick={() => changePage(page)}><p>{page.charAt(0).toUpperCase() + page.slice(1)}</p></li>
-          )
+            <li key={page} className='nav-item selected' onClick={() => changePage(page)}><p>{page}</p></li>
+          );
         } else {
-          return(
-            <li key={page} className='nav-item' onClick={() => changePage(page)}><p>{page.charAt(0).toUpperCase() + page.slice(1)}</p></li>
-          )
+          return (
+            <li key={page} className='nav-item' onClick={() => changePage(page)}><p>{page}</p></li>
+          );
         }
       }
-    })
-  }
-
-  const renderContent = () => {
-    switch (currentPage) {
-      case 'home':
-        return <Home cld={cld} />
-      break;
-      case 'schedule':
-        return <Schedule cld={cld} />
-      break;
-      case 'travel':
-        return <Travel cld={cld} />
-      break;
-      case 'faq':
-        return <Faq cld={cld} />
-      break;
-      case 'contact':
-        return <Contact cld={cld} />
-      break;
-      default:
-        return <Home cld={cld} />
-      break;
-    }
+    });
   }
 
   return (
@@ -92,7 +57,9 @@ function App() {
         }
       </header>
       <main>
-        {renderContent()}
+        <ContentBox
+          page={currentPage}
+        />
       </main>
     </div>
   );

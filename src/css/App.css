@@ -85,6 +85,17 @@ h2 {
   padding: 0 0 20px 0;
 }
 
+main {
+  display: flex;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 790px) {
+  h2 {
+    font-size: 50px;
+  }
+}
+
 @media only screen and (max-width: 600px) {
   .app-header {
     display: grid;
