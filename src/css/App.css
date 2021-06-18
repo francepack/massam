@@ -3,24 +3,29 @@
 }
 
 .app-header {
+  background: no-repeat center url('https://res.cloudinary.com/drerpvd8x/image/upload/c_crop,g_south,w_2000,h_400,y_140/Screen_Shot_2021-06-17_at_5.05.45_PM_u6xqfw');
   background-color: #282c34;
   color: white;
-  padding: 40px 0 0 0;
+  padding: 50px 0 0 0;
 }
 
 .title {
   grid-area: title;
   color: white;
+  position: relative;
+  bottom: 30px;
+  left: 20%;
 }
 
 h2 {
+  text-shadow: 2px 2px rgba(57, 57, 60, 0.4);
   font-family: 'Dancing Script', cursive;
-  font-size: 48px;
+  font-size: 62px;
 }
 
 .nav-bar-area {
   grid-area: nav;
-  padding: 20px 0;
+  padding: 200px 0 40px 0;
   width: 100%;
 }
 
@@ -28,15 +33,18 @@ h2 {
   display: flex;
   flex-direction: row;
   list-style-type: none;
-  margin: 0 20px 0 20px;
+  justify-content: space-around;
   width: 100%;
 }
 
 .nav-item {
+  border-radius: 15px;
+  background-color: rgba(0, 0, 0, 0.25);
   height: 40px;
-  width: 10%;
+  width: 110px;
   display: flex;
   flex-direction: column;
+  font-size: 20px;
   justify-content: center;
 }
 
@@ -55,7 +63,10 @@ h2 {
 }
 
 .selected {
-  color: red;
+  color: #e0c9be;
+  text-shadow: 2px 2px rgba(57, 57, 60, 0.4);
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: all 0.8s ease;
 }
 
 .menu-bar {

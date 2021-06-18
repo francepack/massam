@@ -22,6 +22,8 @@ function App() {
     }
   });
 
+  const banner = cld.image("Screen_Shot_2021-06-17_at_1.56.09_PM_mebful")
+
   const changePage = (page) => {
     setCurrentPage(page);
   }
