@@ -1,20 +1,17 @@
 import React, { useState } from 'react';
 import {AdvancedImage} from '@cloudinary/react';
 import {Cloudinary} from '@cloudinary/base';
-import Schedule from './Schedule.js';
-import Gifts from './Gifts.js';
-import Food from './Food.js';
-import Denver from './Denver.js';
-import Travel from './Travel.js';
-import Contact from './Contact.js';
-import Covid from './Covid.js';
-import Home from './Home.js';
+import Schedule from './Components/Schedule.js';
+import Faq from './Components/Faq.js';
+import Travel from './Components/Travel.js';
+import Contact from './Components/Contact.js';
+import Home from './Components/Home.js';
 import './css/app.css';
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
   const [isNavActive, setNav] = useState(false);
-  const pages = ['home', 'schedule', 'denver', 'travel', 'food', 'gifts', 'covid', 'contact' ];
+  const pages = ['home', 'schedule', 'travel', 'faq', 'contact' ];
 
   const cld = new Cloudinary({
     cloud: {
@@ -57,20 +54,11 @@ function App() {
       case 'schedule':
         return <Schedule cld={cld} />
       break;
-      case 'denver':
-        return <Denver cld={cld} />
-      break;
       case 'travel':
         return <Travel cld={cld} />
       break;
-      case 'food':
-        return <Food cld={cld} />
-      break;
-      case 'gifts':
-        return <Gifts cld={cld} />
-      break;
-      case 'covid':
-        return <Covid cld={cld} />
+      case 'faq':
+        return <Faq cld={cld} />
       break;
       case 'contact':
         return <Contact cld={cld} />
