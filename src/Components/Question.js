@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import '../css/question.css';
 
 function Question(props) {
 
@@ -9,18 +10,36 @@ function Question(props) {
     setActive(toggle);
   }
 
-  return (
-    <div className='quesiton'>
-      <div className='q' onClick={() => toggleActive()}>
-        {props.q}
-      </div>
-      <div className='answer'>
-        {isActive &&
-          <div className='a'>
-            {props.a}
+  const renderQuestion = () => {
+    if (isActive) {
+      return (
+        <div className='question-box-active question-box'>
+          <div className='question question-active'>
+            <div className='plus-icon'><div className='circle circle-active'><div className='cross cross-active'></div></div></div>
+            <p className='question-text'>{props.q}</p>
           </div>
-        }
-      </div>
+        </div>
+      )
+    } else {
+      return (
+        <div className='question-box'>
+          <div className='question'>
+            <div className='plus-icon'><div className='circle'><div className='cross'></div></div></div>
+            <p className='question-text'>{props.q}</p>
+          </div>
+        </div>
+      )
+    }
+  }
+
+  return (
+    <div className='question-box-wrapper' onClick={() => toggleActive()}>
+      {renderQuestion()}
+      {isActive &&
+        <div className='answer-box'>
+          {props.a}
+        </div>
+      }
     </div>
   );
 }

@@ -1,0 +1,11 @@
+.faq {
+  background-color: #eabdab;
+  border: solid #b49b8c 2px;
+  border-radius: 15px;
+  padding: 0 20px;
+}
+
+.answer {
+  margin: 0 80px;
+  padding: 14px 0;
+}
