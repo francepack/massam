@@ -8,7 +8,7 @@ function Faq(props) {
 const a1 = () => {
   return (
     <div className='answer'>
-      <p>There will be plenty of vegetarian food options. If you need a vegan or gluten free meal or if you have food allergies, our caterers will accommodate. Please let us know ahead of time by emailing CelebrateMasAndSam@gmail.com.</p>
+      <p>There will be plenty of vegetarian food options. If you seek vegan or gluten free meals, or if you have food allergies, our caterers can accommodate. Please inform us in advance by emailing CelebrateMasAndSam@gmail.com.</p>
     </div>
   );
 }
@@ -48,15 +48,15 @@ const a4 = () => {
 
 const a5 = () => {
   return (
-    <div className='answer'>
-      <p>Yes! Of course you can see our sweet, adorable baby.</p>
+    <div className='answer obi-pic-box'>
+      <p>Yes! Of course you can see our sweet, adorable baby. He will be in attendance and is excited to meet you.</p>
       {obiPics.map(pic => {
         let picSize='small';
         if (props.size.width > 750) picSize = 'big';
         const dimentions = picSizes[picSize + pic.layout];
         const url = 'https://res.cloudinary.com/drerpvd8x/image/upload/' + dimentions + pic.name;
         return (
-          <div className='obiPic' key={pic.name}>
+          <div className='obi-pic' key={pic.name}>
             <img src={url} />
           </div>
         );

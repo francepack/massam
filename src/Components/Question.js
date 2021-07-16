@@ -19,7 +19,7 @@ function Question(props) {
             <p className='question-text'>{props.q}</p>
           </div>
         </div>
-      )
+      );
     } else {
       return (
         <div className='question-box'>
@@ -28,7 +28,7 @@ function Question(props) {
             <p className='question-text'>{props.q}</p>
           </div>
         </div>
-      )
+      );
     }
   }
 

@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
+import '../css/home.css';
 
 function Home(props) {
   return (
     <div className='home'>
-      <p>Welcome! We are excited to host a party! Hope to see you there.</p>
-      <p>Short version of this website: email us CelebrateMasAndSam@gmail.com at with any questions, or to discuss travel/lodging arrangements.</p>
+      <p>Welcome! We are excited to host you for our wedding!</p>
+      <p>Here is the short version of this page:</p>
+      <p>Please email us at CelebrateMasAndSam@gmail.com with any questions, or to discuss travel/lodging arrangements.</p>
     </div>
   );
 }

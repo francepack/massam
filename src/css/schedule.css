@@ -1,0 +1,37 @@
+.schedule header {
+  margin-bottom: 60px;
+}
+
+.schedule header h1 {
+  font-size: 40px;
+}
+
+.schedule header h3 {
+  font-size: 30px;
+}
+
+.schedule header h4 {
+  font-size: 24px;
+}
+
+.days {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.day {
+  border: 2px solid #b49b8c;
+  width: 20%;
+  margin: 26px 0;
+  min-width: 150px;
+}
+
+.day p {
+  margin: 16px;
+}
+
+.day h3 {
+  margin-top: 16px;
+}

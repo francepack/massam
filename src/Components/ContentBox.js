@@ -12,27 +12,27 @@ function ContentBox(props) {
   const renderContent = () => {
     switch (props.page) {
       case 'Home':
-        return <Home />
+        return <Home />;
       break;
       case 'Schedule':
-        return <Schedule />
+        return <Schedule />;
       break;
       case 'Travel':
-        return <Travel />
+        return <Travel />;
       break;
       case 'FAQs':
-        return <Faq size={props.size} />
+        return <Faq size={props.size} />;
       break;
       case 'Our Story':
-        return <OurStory />
+        return <OurStory />;
       break;
       case 'Contact':
-        return <Contact />
+        return <Contact />;
       break;
       default:
-        return <Home />
+        return <Home />;
       break;
-    }
+    };
   }
 
   return (

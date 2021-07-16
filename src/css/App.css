@@ -2,6 +2,14 @@
   text-align: center;
 }
 
+a {
+  color: #844f4f;
+}
+
+a:hover {
+  color: #c26464;
+}
+
 .app-header {
   background: no-repeat center url('https://res.cloudinary.com/drerpvd8x/image/upload/c_crop,g_south,w_2000,h_400,y_140/Screen_Shot_2021-06-17_at_5.05.45_PM_u6xqfw');
   background-color: #282c34;
