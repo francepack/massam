@@ -9,7 +9,7 @@ const a1 = () => {
   return (
     <div className='answer'>
       <p>There will be plenty of vegetarian food options available. Food will be served buffet style, and there will also be a children's buffet for younger guests. If you are in need of vegan or gluten free meals, or if you have food allergies, our caterers can accommodate. Please inform us in advance by emailing:</p>
-      <p><i>CelebrateMasAndSam@gmail.com</i>.</p>
+      <p><i>CelebrateMasAndSam@gmail.com</i></p>
     </div>
   );
 }

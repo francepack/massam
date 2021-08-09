@@ -26,4 +26,11 @@
   .answer {
     margin: 0 10px;
   }
+  .answer-box {
+    margin: 0 14px;
+  }
+  .question-box {
+    margin: 0 14px;
+
+  }
 }
