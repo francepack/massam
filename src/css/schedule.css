@@ -1,5 +1,11 @@
 .schedule header {
-  margin-bottom: 60px;
+  margin-bottom: 40px;
+  width: 70%;
+  max-width: 900px;
+  padding-bottom: 40px;
+  border-bottom: solid 1px black;
+  position: relative;
+  left: 15%;
 }
 
 .schedule header h1 {
@@ -34,4 +40,18 @@
 
 .day h3 {
   margin-top: 16px;
+}
+
+.activities h3 {
+  font-size: 32px;
+}
+
+.activities h4 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.activities p {
+  margin-bottom: 10px;
+
 }

@@ -22,21 +22,20 @@
   padding: 10px 0;
 }
 
-.question-box-wrapper:hover {
-  cursor: pointer;
-}
-
 .question-text {
   color: #1e1d1c;
-  font-size: 18px;
+  font-size: 24px;
   font-weight: bold;
   letter-spacing: 1px;
   position: relative;
-  top: 3px;
 }
 
 .plus-icon {
   margin-left: 30px;
+}
+
+.plus-icon:hover {
+  cursor: pointer;
 }
 
 .circle {
@@ -66,6 +65,7 @@
 
 .cross-active {
   background: #60524a;
+  position: relative;
 }
 
 .cross::after {
@@ -80,10 +80,17 @@
 
 .cross-active::after {
     background: #756359;
+    content: '';
+    height: 4px;
+    left: -6px;
+    top: -1px;
+    position: absolute;
+    width: 12px;
   }
 
 .answer-box {
   background-color: #eabdab;
   border-radius: 0 0 15px 15px;
+  font-size: 18px;
   margin: 0 80px;
 }

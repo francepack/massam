@@ -15,7 +15,7 @@ function Question(props) {
       return (
         <div className='question-box-active question-box'>
           <div className='question question-active'>
-            <div className='plus-icon'><div className='circle circle-active'><div className='cross cross-active'></div></div></div>
+            <div className='plus-icon' onClick={() => toggleActive()}><div className='circle circle-active'><div className='cross-active'></div></div></div>
             <p className='question-text'>{props.q}</p>
           </div>
         </div>
@@ -24,7 +24,7 @@ function Question(props) {
       return (
         <div className='question-box'>
           <div className='question'>
-            <div className='plus-icon'><div className='circle'><div className='cross'></div></div></div>
+            <div className='plus-icon' onClick={() => toggleActive()}><div className='circle'><div className='cross'></div></div></div>
             <p className='question-text'>{props.q}</p>
           </div>
         </div>
@@ -33,7 +33,7 @@ function Question(props) {
   }
 
   return (
-    <div className='question-box-wrapper' onClick={() => toggleActive()}>
+    <div className='question-box-wrapper'>
       {renderQuestion()}
       {isActive &&
         <div className='answer-box'>
