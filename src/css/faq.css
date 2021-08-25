@@ -15,10 +15,9 @@
   margin-bottom: 16px;
 }
 
-.obi-pic-box {
+.obi-pics {
   display: flex;
-  flex-wrap: wrap;
-  /* margin: 0; */
+  flex-direction: column;
 }
 
 

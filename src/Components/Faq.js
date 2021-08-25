@@ -20,7 +20,7 @@ const a2 = () => {
       <p>Really, you don't need to get us any gifts - we have everything we need. Having you present is gift enough for us.</p>
       <p>For those who are able and inclined to mark the occassion with a gift, we have a few things in mind:</p>
       <p>1. Consider a donation to <a href='https://www.youthonrecord.org' target='_blank'>Youth on Record</a> or <a href='https://artfromashes.org' target='_blank'>Art From Ashes</a>. We've been reflecting on arts as a way to empower youth, and both of these programs are funded in part by grants through Samantha's employer, so she has seen first hand the great work that is accomplished.</p>
-      <p>2. If you really want to buy us something, we are registered at <a href='https://www.target.com/gift-registry/gift/celebratemasandsam' target='_blank'>Taget</a> and <a href='https://www.kangacare.com/apps/giftregistry/registry/147896' target='_blank'>KangaCare</a></p>
+      <p>2. If you really want to buy us something, we are registered at <a href='https://www.target.com/gift-registry/gift/celebratemasandsam' target='_blank'>Taget</a> and <a href='https://www.kangacare.com/apps/giftregistry/registry/147896' target='_blank'>KangaCare</a>. The things we registered for are either mundane family needs, or large items we wouldn't get for ourselves. But these are the things we need. Seriously, go for probiotic drops.</p>
       <p>3. We are preparing to landscape and build a deck in the backyard. We could use help with lumber and other associated expenses. We want to buy from local companies for this project but many local places do not have gift cards. One place that does is <a href='https://www.otoolesgardencenters.com/' target='_blank'>O'Toole's Garden Center</a>. Other businesses we plan to use are <a href='https://www.ewinghardscape.com/locations/colorado-locations/littleton/' target='_blank'>Ewing</a>, <a href='https://gvt.net/' target='_blank'>Green Valley Turf</a>, <a href='https://www.frlco.com/' target='_blank'>Front Range Lumber Company</a>, and <a href='https://denvertoollibrary.org/' target='_blank'>Denver Tool Library</a>. To help us with this project, you can venmo Samantha, and we plan to update about our progress! <i>Venmo: @samanthapaigegarrett</i></p>
     </div>
   );
@@ -54,8 +54,9 @@ const a5 = () => {
   return (
     <div className='answer obi-pic-box'>
       <p>Yes! Of course you can see our sweet, adorable baby. He will be in attendance and is excited to meet you.</p>
+      <div className='obi-pics'>
       {obiPics.map(pic => {
-        let picSize='small';
+        let picSize= 'small';
         if (props.size.width > 750) picSize = 'big';
         const dimentions = picSizes[picSize + pic.layout];
         const url = 'https://res.cloudinary.com/drerpvd8x/image/upload/' + dimentions + pic.name;
@@ -65,6 +66,17 @@ const a5 = () => {
           </div>
         );
       })}
+      </div>
+    </div>
+  );
+}
+
+const a6 = () => {
+  return (
+    <div className='answer'>
+      <p>Please do wear clothes. Be comfortable. Know that there will be photography, so wear something you don't mind documented.</p>
+      <p>Wear something weather appropriate. (See Travel section)</p>
+      <p>In summary, we suggest something nice, but not fancy.</p>
     </div>
   );
 }
@@ -78,6 +90,10 @@ const a5 = () => {
       <Question
         q='Gifts?'
         a={a2()}
+      />
+      <Question
+        q='Attire?'
+        a={a6()}
       />
       <Question
         q='Kids?'

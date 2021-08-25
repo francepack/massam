@@ -10,8 +10,8 @@ export const obiPics = [
 ];
 
 export const picSizes = {
-  bigW: 'w_400,h_270/',
-  bigL: 'w_250,h_400/',
-  smallW: 'w_250,h_120/',
-  smallL: 'w_150,h_270/'
+  bigW: 'w_430,h_270/',
+  bigL: 'w_280,h_400/',
+  smallW: 'w_280,h_160/',
+  smallL: 'w_180,h_270/'
 };

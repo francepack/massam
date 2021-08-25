@@ -7,6 +7,7 @@ import './css/app.css';
 function App() {
   const [ currentPage, setCurrentPage ] = useState('Home');
   const [ isNavActive, setNav ] = useState(false);
+
   const pages = [ 'Home', 'Our Story', 'Schedule', 'Travel', 'FAQs', 'Contact' ];
 
   // hook to use window size
@@ -24,9 +25,9 @@ function App() {
           height: window.innerHeight,
         });
       }
-      window.addEventListener("resize", handleResize);
+      window.addEventListener('resize', handleResize);
       handleResize();
-      return () => window.removeEventListener("resize", handleResize);
+      return () => window.removeEventListener('resize', handleResize);
     }, []);
     return windowSize;
   }
@@ -61,16 +62,16 @@ function App() {
       <header className='app-header'>
         <h2 className='title' onClick={() => changePage('home')}>Samantha + Mason</h2>
         <div className='nav-bar-area'>
-            <ul className='list'>
-              {renderNavItems()}
-            </ul>
-            <div className='drop-down-nav'>
-              <div className='icon' onClick={() => toggleNav()}>
-                <div className='menu-bar'></div>
-                <div className='menu-bar'></div>
-                <div className='menu-bar'></div>
-              </div>
+          <ul className='list'>
+            {renderNavItems()}
+          </ul>
+          <div className='drop-down-nav'>
+            <div className='icon' onClick={() => toggleNav()}>
+              <div className='menu-bar'></div>
+              <div className='menu-bar'></div>
+              <div className='menu-bar'></div>
             </div>
+          </div>
         </div>
         {isNavActive &&
           <ul className='expanded-menu'>
