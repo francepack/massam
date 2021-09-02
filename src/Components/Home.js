@@ -7,7 +7,7 @@ function Home(props) {
     <div className='home'>
       <h2 className='bmarg'>Welcome!</h2>
       <h3 className='bmarg'>We are very excited to host you for our wedding!</h3>
-      <h3 className='bmarg'>***Please check out the twitter feed below for live updates about our whereabouts.***</h3>
+      <h3 className='bmarg'>***Please check out the twitter feed below for live updates, including where to meet up with us Friday and Saturday night.***</h3>
       <h3 className='bmarg'>***Also, check the Ceremony tab for important wedding day details.***</h3>
       <p className='bmarg'>Please look through this page using the navigation buttons above to find information about our wedding on September 5th at Hudson Gardens.</p>
       <h3 className='bmarg'>The FAQs page is worth checking out!</h3>

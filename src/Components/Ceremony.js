@@ -22,12 +22,12 @@ function Ceremony(props) {
       <h4 className='bmarg'>Plus, there will be special music playing before the ceremony, by the <a href='https://www.youtube.com/watch?v=hUHgSQTDJy0&t=5s' target='_blank'>talented Collin Estes</a>.</h4>
       <p>Arriving plenty early is a great idea. This is a public Gardens, afterall- A beautiful place to walk around and mentally prepare for the party to ensue.</p>
       <h3 className='bmarg'>Wedding Program</h3>
-      <h4>Special Music while guests are arriving</h4>
+      <h4>Special Music while guests arrive</h4>
       <h4>Processional</h4>
       <h4>Greeting</h4>
       <h4>Centering Prayer</h4>
       <h4>Reading - Sonnet XVII by Pablo Neruda</h4>
-      <h4>Song - Beloved One by Ben Harper</h4>
+      <h4>Song - "Beloved One" by Ben Harper</h4>
       <h4>Scripture - Ruth 1:16-17</h4>
       <h4>Vows</h4>
       <h4>Sharing of Rings</h4>
