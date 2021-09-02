@@ -5,6 +5,7 @@ import Travel from './Travel.js';
 import OurStory from './OurStory.js';
 import Contact from './Contact.js';
 import Home from './Home.js';
+import Ceremony from './Ceremony.js';
 import '../css/content-box.css';
 
 function ContentBox(props) {
@@ -13,6 +14,9 @@ function ContentBox(props) {
     switch (props.page) {
       case 'Home':
         return <Home />;
+      break;
+      case 'Ceremony':
+        return <Ceremony />;
       break;
       case 'Schedule':
         return <Schedule />;

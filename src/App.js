@@ -8,7 +8,7 @@ function App() {
   const [ currentPage, setCurrentPage ] = useState('Home');
   const [ isNavActive, setNav ] = useState(false);
 
-  const pages = [ 'Home', 'Our Story', 'Schedule', 'Travel', 'FAQs', 'Contact' ];
+  const pages = [ 'Home', 'Our Story', 'Ceremony', 'Schedule', 'Travel', 'FAQs', 'Contact' ];
 
   // hook to use window size
   const size = useWindowSize();
